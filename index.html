@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-left">
+            <a href="javascript:void(0)" class="home-link">
+                <span class="emoji">🎮</span>
+                <span class="app-name">TicTacToe</span>
+            </a>
+            <a href="https://github.com/bene802/TicTacToe" class="source-code">
+                <i class="fab fa-github"></i>
+                Source Code
+            </a>
+        </div>
+        <div class="nav-right">
+            <span class="author">By Bene - 2024</span>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="game-setup">
+            <!-- Placeholder for other things -->
+            <div id="questions-setup">
+                <h3>Set up your questions</h3>
+                <div id="questions-container">
+                    <!-- Questions will be dynamically added here -->
+                </div>
+                <button id="startGame" class="btn">Start Game</button>
+            </div>
+        </div>
+        
+        <div class="game-board" style="display: none;">
+            <div class="player-turn">Current Player: <span id="currentPlayer">⭕</span></div>
+            <div class="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </div>
+
+        <div id="questionModal" class="modal">
+            <div class="modal-content">
+                <h2>Answer the Question</h2>
+                <div id="questionContent">
+                    <p id="questionText"></p>
+                    <div id="questionImage" class="question-image"></div>
+                </div>
+                <div class="teacher-controls">
+                    <button id="correctAnswer" class="btn btn-success">Correct ✓</button>
+                    <button id="wrongAnswer" class="btn btn-danger">Wrong ✗</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="resultModal" class="modal">
+            <div class="modal-content result-content">
+                <div id="resultMessage"></div>
+                <div id="emojiContainer" class="emoji-container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
